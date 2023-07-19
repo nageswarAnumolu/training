@@ -7,14 +7,15 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 		
-		<bean id="ink" class="lookout.training.springcore.xmlconfiguration.setterInjection.BlackInk">
-		</bean>
-	 
-		<bean id="pen" class="lookout.training.springcore.xmlconfiguration.setterInjection.ParkerPen" >
-			<property name="ink" ref="ink" />
-		</bean>
-		<bean id="writer" class="lookout.training.springcore.xmlconfiguration.setterInjection.Writer" >
-			<property name="pen" ref="pen" />
-		</bean>
+			<bean id="messagingService" class="lookout.training.springcore.DI.EmailService" > </bean>
+			
+				
+			<bean id="notificationService111111" class="lookout.training.springcore.DI.NotificationService" >
+						<constructor-arg ref="messagingService" />
+			</bean>
+					
+			<bean id="paymentService" class="lookout.training.springcore.DI.PaymentServiceService" >
+				<constructor-arg ref="notificationService111111" />
+			</bean>
 	
 	</beans>

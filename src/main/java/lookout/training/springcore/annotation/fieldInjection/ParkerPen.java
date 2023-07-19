@@ -3,7 +3,7 @@ package lookout.training.springcore.annotation.fieldInjection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("abcccc")
 public class ParkerPen implements Pen {
 
 	@Autowired

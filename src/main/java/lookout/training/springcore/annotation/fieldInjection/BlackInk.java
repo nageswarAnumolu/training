@@ -2,7 +2,7 @@ package lookout.training.springcore.annotation.fieldInjection;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component()
 public class BlackInk implements Ink{
 	
 	@Override

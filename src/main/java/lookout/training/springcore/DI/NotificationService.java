@@ -1,4 +1,4 @@
-package lookout.training.couplingInterfaceApproach;
+package lookout.training.springcore.DI;
 
 public class NotificationService {
 	
